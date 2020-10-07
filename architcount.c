@@ -29,7 +29,7 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
 
     common_cache_params_t cc_params = {.cache_size=size};
 
-    cache_t *lru_cache = create_cache("LRU", cc_params, NULL);
+    cache_t *lru_cache = create_cache("ARC", cc_params, NULL);
     traceStats trace_stat = {0,0,0,0,0,0,0};
 
     while(read_one_req(reader_csv, req) == 0){
@@ -63,8 +63,8 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
 
     printf("Writing to output file\n");
     FILE *out_file = fopen(op_fname, "a");
-    fprintf(out_file, "cache_size,hit_count,miss_count,total_count\n");
-    fprintf(out_file, "%d,%d,%d,%d\n",size,trace_stat.total_hit,trace_stat.total_miss,trace_stat.total_count);
+    fprintf(out_file, "cache_size,algo,hit_count,miss_count,total_count\n");
+    fprintf(out_file, "%d,ARC,%d,%d,%d\n",size,trace_stat.total_hit,trace_stat.total_miss,trace_stat.total_count);
     printf("The total count is: %d\n", trace_stat.total_count);
     
     printf("The read count is: %d\n", trace_stat.read_count);
@@ -81,9 +81,5 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
 int main(int argc, char* argv[]){
     
     uint64_t unique_size = atoi(argv[2]);
-    for(int i=10; i<=90; i = i+10){
-        float_t cz = ((float) i / 100.0) * (float) unique_size;
-        compute_stat(argv[1], cz, i, argv[3]);
-    }
     compute_stat(argv[1], unique_size, 100, argv[3]);
 }
