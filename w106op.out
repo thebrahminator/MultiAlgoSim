@@ -1,0 +1,6 @@
+cache_size,algo,hit_count,miss_count,total_count
+102102,FIFO,60521250,1854648,62375898
+cache_size,algo,hit_count,miss_count,total_count
+102102,MRU,46892176,15483722,62375898
+cache_size,algo,hit_count,miss_count,total_count
+102102,LFU,46855495,15520403,62375898

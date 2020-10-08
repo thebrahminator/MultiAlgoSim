@@ -61,7 +61,7 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
     free_request(req);
     close_reader(reader_csv);
 
-    printf("Writing to output file\n");
+    // printf("Writing to output file\n");
     FILE *out_file = fopen(op_fname, "a");
     fprintf(out_file, "cache_size,algo,hit_count,miss_count,total_count\n");
     fprintf(out_file, "%d,FIFO,%d,%d,%d\n",size,trace_stat.total_hit,trace_stat.total_miss,trace_stat.total_count);

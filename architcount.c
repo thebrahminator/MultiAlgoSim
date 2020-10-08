@@ -33,6 +33,7 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
     traceStats trace_stat = {0,0,0,0,0,0,0};
 
     while(read_one_req(reader_csv, req) == 0){
+        printf("%ld\n", req->obj_id_int);
         if(lru_cache->get(lru_cache, req) != cache_ck_miss){
             if(req->op == OP_READ){
                 trace_stat.read_hit++;
@@ -44,6 +45,7 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
                 trace_stat.total_hit++;
             }
         }else{
+            printf("Found\n");
             if(req->op == OP_READ){
                 trace_stat.read_miss++;
                 trace_stat.read_count++;
@@ -57,6 +59,7 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
         trace_stat.total_count++;
     }
 
+    printf("Done!\n");
     lru_cache->cache_free(lru_cache);
     free_request(req);
     close_reader(reader_csv);
