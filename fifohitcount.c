@@ -5,15 +5,15 @@
 #include<string.h>
 
 typedef struct{
-    int read_hit;
-    int write_hit;
-    int read_miss;
-    int write_miss;
-    int read_count;
-    int write_count;
-    int total_count;
-    int total_hit;
-    int total_miss;
+    uint64_t read_hit;
+    uint64_t write_hit;
+    uint64_t read_miss;
+    uint64_t write_miss;
+    uint64_t read_count;
+    uint64_t write_count;
+    uint64_t total_count;
+    uint64_t total_hit;
+    uint64_t total_miss;
 }traceStats;
 
 void compute_stat(char* file_name, int size, int percent, char* op_fname){
@@ -64,17 +64,7 @@ void compute_stat(char* file_name, int size, int percent, char* op_fname){
     // printf("Writing to output file\n");
     FILE *out_file = fopen(op_fname, "a");
     fprintf(out_file, "cache_size,algo,hit_count,miss_count,total_count\n");
-    fprintf(out_file, "%d,FIFO,%d,%d,%d\n",size,trace_stat.total_hit,trace_stat.total_miss,trace_stat.total_count);
-    printf("The total count is: %d\n", trace_stat.total_count);
-    
-    printf("The read count is: %d\n", trace_stat.read_count);
-    printf("The write count is: %d\n", trace_stat.write_count);
-    
-    printf("The read hits are: %d\n", trace_stat.read_hit);
-    printf("The write hits are: %d\n", trace_stat.write_hit);
-
-    printf("The read misses are: %d\n", trace_stat.read_miss);
-    printf("The write misses are: %d\n", trace_stat.write_miss);
+    fprintf(out_file, "%ld,FIFO,%ld,%ld,%ld\n",size,trace_stat.total_hit,trace_stat.total_miss,trace_stat.total_count);
     fclose(out_file);
 }
 
