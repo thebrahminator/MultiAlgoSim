@@ -1,0 +1,16 @@
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,MRU,19716,5412,25128,26332,7308,33640,7783635,2635193,10418828,7777019,2633297,10410316,0
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,LFU,36371,10943,47314,42807,12814,55621,7783635,2635193,10418828,7777199,2633322,10410521,0
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,LFU,36867886,15089184,51957070,28017,21040,49057,7783635,2635193,10418828,7755616,2614153,10369769,1
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,FIFO,36867253,15089184,51956437,36996678,15133942,52130620,7783635,2635193,10418828,7654210,2590435,10244645,0
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,FIFO,36867886,15089184,51957070,370351,75729,446080,7783635,2635193,10418828,7413282,2559464,9972746,1
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,LRU,36867886,15089184,51957070,277615,68113,345728,7783635,2635193,10418828,7506018,2567080,10073098,1
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,MRU,36867886,15089184,51957070,6616,1896,8512,7783635,2635193,10418828,7777017,2633297,10410314,1
+tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc
+2,4,LRU,LRU,36867886,15089184,51957070,37000082,15131704,52131786,7783635,2635193,10418828,7651439,2592673,10244112,0
