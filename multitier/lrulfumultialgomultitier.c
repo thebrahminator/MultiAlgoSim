@@ -24,7 +24,7 @@ typedef struct{
 void basic_stats_file(char* op_fname, traceStats multi_tier_stats, uint64_t tier_1_size, uint64_t tier_2_size, uint64_t incexc){
     FILE *out_file = fopen(op_fname, "a");
 
-    fprintf(out_file, "tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc\n");
+    fprintf(out_file, "tier_1_size,tier_2_size,algo_t1,algo_t2,tier_1_read_hit,tier_1_write_hit,tier_1_total_hit,tier_2_read_hit,tier_2_write_hit,tier_2_total_hit,tier_1_read_miss,tier_1_write_miss,tier_1_total_miss,tier_2_read_miss,tier_2_write_miss,tier_2_total_miss,incexc\n");
     fprintf(out_file, "%ld,%ld,LRU,LFU,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld\n", tier_1_size,tier_2_size,multi_tier_stats.tier_1_read_hit,multi_tier_stats.tier_1_write_hit,
     multi_tier_stats.tier_1_total_hit,multi_tier_stats.tier_2_read_hit,multi_tier_stats.tier_2_write_hit,multi_tier_stats.tier_2_total_hit,multi_tier_stats.tier_1_read_miss,
     multi_tier_stats.tier_1_write_miss,multi_tier_stats.tier_1_total_miss,multi_tier_stats.tier_2_read_miss,multi_tier_stats.tier_2_write_miss,multi_tier_stats.tier_2_total_miss,incexc);
